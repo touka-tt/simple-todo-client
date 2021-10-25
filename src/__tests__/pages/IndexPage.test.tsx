@@ -1,4 +1,5 @@
 import {cleanup, render, screen} from "@testing-library/react";
+import IndexPage from "../../pages/IndexPage";
 
 describe("Index Page Components", () => {
     afterEach(() => {
