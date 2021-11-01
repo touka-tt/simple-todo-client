@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 
-const IndexPage = () => (
+const NewTodoPage = () => (
     <div className="flex">
-        <Header/>Index
+        <Header/>New
     </div>
 )
 
-export default IndexPage
+export default NewTodoPage

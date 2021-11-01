@@ -1,14 +1,14 @@
 import {cleanup, screen} from "@testing-library/react";
-import IndexPage from "../../pages/IndexPage";
 import { render } from "../../test-utils";
+import NewTodoPage from "../../pages/NewTodoPage";
 
-describe("Index Page Components", () => {
+describe("New Todo Page Components", () => {
     afterEach(() => {
         cleanup()
     })
 
     it("初期表示", () => {
-        render(<IndexPage />)
+        render(<NewTodoPage />)
         expect(screen.getByTestId("Header")).toBeTruthy()
     })
 })
