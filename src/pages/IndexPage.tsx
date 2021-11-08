@@ -1,27 +1,17 @@
-import {useEffect, useState} from "react";
+import {useSelector} from "react-redux";
 import Header from "../components/Header";
-import {getTodos, Todo} from "../features/TodoApi";
+import {RootState} from "../app/store";
 
 const IndexPage = () => {
-
-    // ※良くない実装であとで消す
-    const [todos, setTodos] = useState<Todo[]>([])
-
-    useEffect(  () => {
-        const get = async () => {
-            const todosResponse = await getTodos()
-            setTodos(todosResponse)
-        }
-        get()
-    }, [])
+    const todos = useSelector((state: RootState) => state.todos)
 
     return (
         <div className="flex">
             <Header/>
             <div>
-                {todos.map((todo) =>
-                    <div key={todo.id}>{todo.title}</div>
-                )}
+            {todos.map((todo) =>
+                <h3 key={todo.id}>{todo.title}</h3>
+            )}
             </div>
         </div>
     )

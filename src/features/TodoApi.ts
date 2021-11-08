@@ -1,10 +1,5 @@
 import axios from "axios"
-
-export interface Todo {
-    id: number
-    title: string
-    completed: boolean
-}
+import {Todo} from "../slices/todoSlice";
 
 export const getTodos = async () => {
     const response = await axios.get<Todo[]>('/todos')
