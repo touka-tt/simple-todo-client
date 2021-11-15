@@ -10,5 +10,6 @@ describe("Index Page Components", () => {
     it("初期表示", () => {
         render(<IndexPage />)
         expect(screen.getByTestId("Header")).toBeTruthy()
+        expect(screen.getByTestId("TodoList")).toBeTruthy()
     })
 })
