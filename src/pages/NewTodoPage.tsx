@@ -1,7 +1,11 @@
 import Header from "../components/Header";
+import NewTodoFormComponent from "../components/NewTodoFormComponent";
 
 const NewTodoPage = () => (
-    <div className="flex"><Header/></div>
+    <div className="flex">
+        <Header/>
+        <NewTodoFormComponent/>
+    </div>
 )
 
 

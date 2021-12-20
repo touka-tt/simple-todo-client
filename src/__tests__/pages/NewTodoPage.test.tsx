@@ -10,5 +10,6 @@ describe("New Todo Page Components", () => {
     it("初期表示", () => {
         render(<NewTodoPage />)
         expect(screen.getByTestId("Header")).toBeTruthy()
+        expect(screen.getByTestId("NewTodoForm")).toBeInTheDocument()
     })
 })
